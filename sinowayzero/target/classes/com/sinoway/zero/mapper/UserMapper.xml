@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.sinoway.zero.mapper.UserMapper">  
+    
+
+     <select id="FindUser" parameterType="com.sinoway.zero.bean.User"
+  		 resultType="com.sinoway.zero.bean.User">  
+  		  SELECT username from users_web
+          WHERE  username = #{username,jdbcType=VARCHAR} and password = #{password,jdbcType=VARCHAR}
+  	</select>
+	    
+</mapper>          

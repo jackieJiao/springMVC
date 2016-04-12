@@ -1,5 +1,7 @@
 package com.sinoway.zero;
 
+import java.sql.Date;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -31,18 +33,6 @@ public class Application extends SpringBootServletInitializer
     {
         ApplicationContext appContext= SpringApplication.run(Application.class, args);
         DGService1 dgService1 = appContext.getBean(DGService1.class);
-        System.out.println("新建一个实体dg");
-        Lygj_dg_detail dg= new Lygj_dg_detail();
-        dg.setId(11);
-        dg.setSphone("aa");
-        dg.setCreatedate("aa");
-//        dg.setDgtype("aa");
-        dg.setNphone("aa");
-        dg.setTcmoney("aa");
-        dgService1.ins(dg);
-        System.out.println("inserttime 结束");
-        
-        
     }
 
 }

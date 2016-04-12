@@ -1,0 +1,29 @@
+﻿spring:
+  view:
+    prefix: /WEB-INF/jsp/
+    suffix: .jsp
+    resource: /css/**
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.207:3306/aa?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 
+
+multipart:
+  maxFileSize: 1280000KB
+  
+dm:
+  servermonitor:
+    api:
+      host: 58.42.251.133
+      port: 9010
+      
+cdn:
+  rootcontext: http://58.42.251.133:38080
+  
+---
+spring:
+  profiles: development
+cdn:
+  rootcontext: http://127.0.0.1:8080
+  
